@@ -11,4 +11,4 @@
 ;M558 P7 C"e0stop" I0 H0.7 R0.1 F1200 T99999 A1 B1
 
 M574 Z0 C"nil" ; no Z endstop switch, free up Z endstop input
-M558 P5 C"zstop" I0 H0.7 R0.1 F1200 T99999 A1 B1
+M558 P5 C"io3.in" I0 H0.7 R0.1 F1200 T99999 A1 B1

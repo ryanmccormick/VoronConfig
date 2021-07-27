@@ -21,7 +21,7 @@ M98 P"/macros/homing/scripts/zhop_up.g"
 ;M98 P"/macros/homing/scripts/probe_zi.g"
 ;M98 P"/macros/zprobe/use_islow.g"         ; switch back to slow probing
  
-G1 X150 Y150 Z5                            ; Now move to middle of the bed, for initial probing
+G1 X175 Y175 Z5                            ; Now move to middle of the bed, for initial probing
 ; P8:       connected to Zmin SIG and GND
 ; I0:       P8 expects NC, TL-Q5MC2-Z is also NC
 ; T18000:   Move to probe points at 300mm/s 
@@ -31,7 +31,7 @@ G1 X150 Y150 Z5                            ; Now move to middle of the bed, for 
 ; R0.1      Set z-Probe recovery time to 0.1 seconds
 ; B0        Leave heater on during probing
 
-M558 P8 C"zprobe.in" I0 H5 A5 S0.01 R0.1 F75 T18000 B0      ; define probe with slow parameters
+M558 P8 C"io7.in" I0 H5 A5 S0.01 R0.1 F75 T18000 B0      ; define probe with slow parameters
 G31 P1000 X0 Y25 Z0                                         ; define probe offset
 G30 S-3                                                     ; probe and set the offset of the probe to trigger height (S-3)
 
